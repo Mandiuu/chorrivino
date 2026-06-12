@@ -236,7 +236,7 @@ footer b{font-family:'Yeseva One',serif;color:var(--bordeaux)}
 
 <!-- ================= HERO ================= -->
 <header class="hero">
-  <div class="eyebrow">Despedida de Seba · Capítulo IV</div>
+  <div class="eyebrow">Despedida de Seba · Viernes 24 de Junio</div>
   <div class="scene-wrap" role="img" aria-label="Dos monitos sentados a una mesa: uno con boina tomando vino y otro chino comiendo papas fritas">
   <svg viewBox="0 0 900 460" xmlns="http://www.w3.org/2000/svg">
     <!-- fondo dividido -->
@@ -326,9 +326,11 @@ footer b{font-family:'Yeseva One',serif;color:var(--bordeaux)}
       <!-- silla -->
       <rect x="218" y="282" width="14" height="160" rx="5" fill="#4A3322"/>
       <rect x="218" y="356" width="86" height="12" rx="5" fill="#4A3322"/>
-      <!-- piernas -->
-      <path d="M290 330 q-26 8 -28 46 l0 50" stroke="#2E2A40" stroke-width="18" fill="none" stroke-linecap="round"/>
-      <rect x="252" y="420" width="34" height="14" rx="7" fill="#1C1A26"/>
+      <!-- piernas abiertas -->
+      <path d="M288 330 q-18 14 -20 50 l0 44" stroke="#2E2A40" stroke-width="18" fill="none" stroke-linecap="round"/>
+      <rect x="256" y="418" width="34" height="14" rx="7" fill="#1C1A26"/>
+      <path d="M308 330 q-4 14 -2 50 l0 44" stroke="#2E2A40" stroke-width="18" fill="none" stroke-linecap="round"/>
+      <rect x="290" y="418" width="34" height="14" rx="7" fill="#1C1A26"/>
       <!-- torso a rayas -->
       <g>
         <path d="M268 250 q34 -16 64 0 l6 84 q-38 14 -76 0 Z" fill="#F5EBDD"/>
@@ -377,9 +379,11 @@ footer b{font-family:'Yeseva One',serif;color:var(--bordeaux)}
       <!-- silla -->
       <rect x="672" y="282" width="14" height="160" rx="5" fill="#4A3322"/>
       <rect x="602" y="356" width="86" height="12" rx="5" fill="#4A3322"/>
-      <!-- piernas -->
-      <path d="M616 330 q26 8 28 46 l0 50" stroke="#2A2A2A" stroke-width="18" fill="none" stroke-linecap="round"/>
-      <rect x="618" y="420" width="34" height="14" rx="7" fill="#1C1A26"/>
+      <!-- piernas abiertas -->
+      <path d="M598 330 q4 14 2 50 l0 44" stroke="#2A2A2A" stroke-width="18" fill="none" stroke-linecap="round"/>
+      <rect x="582" y="418" width="34" height="14" rx="7" fill="#1C1A26"/>
+      <path d="M618 330 q18 14 20 50 l0 44" stroke="#2A2A2A" stroke-width="18" fill="none" stroke-linecap="round"/>
+      <rect x="622" y="418" width="34" height="14" rx="7" fill="#1C1A26"/>
       <!-- torso: camisa cuello mao -->
       <path d="M572 250 q34 -16 64 0 l6 84 q-38 14 -76 0 Z" fill="#C9342B"/>
       <path d="M604 246 l0 80" stroke="#8E1F19" stroke-width="3"/>
@@ -430,7 +434,7 @@ footer b{font-family:'Yeseva One',serif;color:var(--bordeaux)}
   <div class="itinerary">
     <article class="card france">
       <div class="emoji-bg">🍷</div>
-      <div class="act">Acto I · 16:30 hrs</div>
+      <div class="act">Acto I</div>
       <h3>Les Dix Vins</h3>
       <div class="meta">
         <span><b>Dónde</b> MUT, Piso 3 — Av. Apoquindo 2730, Las Condes</span>
@@ -441,7 +445,7 @@ footer b{font-family:'Yeseva One',serif;color:var(--bordeaux)}
 
     <article class="card china">
       <div class="emoji-bg">🍟</div>
-      <div class="act">Acto II · al caer la noche</div>
+      <div class="act">Acto II</div>
       <h3>Chorrillana China</h3>
       <div class="meta">
         <span><b>Dónde</b> <span class="tbd">📍 Lugar por definir</span></span>
@@ -457,9 +461,9 @@ footer b{font-family:'Yeseva One',serif;color:var(--bordeaux)}
 <section class="signup" id="inscripcion">
   <div class="signup-inner">
     <h2 class="section-title">Inscríbete</h2>
-    <div class="cupos" id="cupos">🪑 Máximo 16 cupos — orden de llegada</div>
+    <div class="cupos" id="cupos">🪑 Máximo 14 cupos — orden de llegada</div>
 
-    <div class="full-banner" id="fullBanner">Lista completa — los 16 cupos están tomados 🍷🍟</div>
+    <div class="full-banner" id="fullBanner">Lista completa — los 14 cupos están tomados 🍷🍟</div>
     <div class="form-row">
       <input type="text" id="nombre" placeholder="Tu nombre y apellido" maxlength="80" autocomplete="name">
       <button id="btn" type="button">¡Voy! 🍷🍟</button>
@@ -484,7 +488,7 @@ footer b{font-family:'Yeseva One',serif;color:var(--bordeaux)}
 const FORM_URL   = 'https://docs.google.com/forms/d/e/1FAIpQLSci8rb-myshaK_KraW25kMZFA7aMdPte177Tu0kRE-L9Pd9NA/formResponse';
 const ENTRY_ID   = 'entry.1505122234';
 const SHEET_ID   = '1CqQqEZyYnNiw3RR6vccE7MB6k3QoUdiYzWczkIBXZhY';
-const MAX        = 16;
+const MAX        = 14;
 
 // ── Leer lista desde Google Sheets (gviz JSONP, no requiere auth) ──
 function loadAttendees() {
@@ -498,7 +502,7 @@ function loadAttendees() {
 
 window.onSheetData = function(res) {
   const rows = res.table.rows;
-  const attendees = rows.slice(1).map(r => r.c[1]?.v).filter(v => v && v.trim());
+  const attendees = rows.map(r => r.c[1]?.v).filter(v => v && v.trim() && v !== 'Nombre');
   render(attendees);
 };
 
@@ -570,7 +574,7 @@ function addName() {
   setTimeout(() => {
     loadAttendees();
     btn.disabled = false;
-    btn.textContent = 'Vooooooy!';
+    btn.textContent = '¡Voy! 🍷🍟';
     error.textContent = `¡Listo, ${name.split(' ')[0]}! Estás dentro 🥂`;
     error.className = 'msg ok';
   }, 1500);
